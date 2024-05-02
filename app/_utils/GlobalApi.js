@@ -13,6 +13,12 @@ const axiosClient =axios.create({
 
 const getProducts=()=> axiosClient.get('/products?populate=*');
 
+const getProductById=(id)=> axiosClient.get('/products/'+id+'?populate=*');
+
+
 export default {
-    getProducts
+    getProducts,
+    getProductById
+
+
 }
