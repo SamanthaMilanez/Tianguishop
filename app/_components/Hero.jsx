@@ -3,36 +3,21 @@ import React from 'react'
 function Hero() {
   return (
   
-<section className="bg-gray-50">
-  <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-    <div className="mx-auto max-w-xl text-center">
-      <h1 className="text-3xl font-extrabold sm:text-5xl">
-      Artículos únicos y de calidad.
-        <strong className="font-extrabold text-[#f87829] sm:block"> Sé parte del cambio. </strong>
-      </h1>
-
-      <p className="mt-4 sm:text-xl/relaxed">
-      Juntos, podemos hacer la diferencia. 
-      ¡Únete a nosotros y haz tu compra hoy mismo!
-      </p>
-
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <a
-          className="block w-full rounded bg-[#ff914d] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#f87829] focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-          href="#"
-        >
-         Comenzar
-        </a>
-
-        <a
-          className="block w-full rounded px-12 py-3 text-sm font-medium text-[#ff914d] shadow hover:text-[#f87829] focus:outline-none focus:ring active:text-red-500 sm:w-auto"
-          href="#"
-        >
-          Saber más
-        </a>
-      </div>
+<section class="bg-[#FF5757] py-20">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-white font-bold text-5xl leading-tight mb-6">Artículos únicos para ti y tu familia</h1>
+                <p class="text-white text-xl mb-8">¡Únete a nosotros y haz tu compra hoy mismo!</p>
+                <a href="/collection"
+                    class="px-6 py-3 bg-white text-[#FF5757] font-bold rounded-full ">Comprar ahora</a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="/pexels-photo-1745747.jpeg" alt="Coffee beans"
+                    class="w-full rounded-lg shadow-lg"/>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
   )
 }

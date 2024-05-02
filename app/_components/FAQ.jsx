@@ -19,7 +19,7 @@ function FAQ() {
         <div class="w-9/12">
             <div class="flex items-start mb-8">
                 <div
-                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-[#f87829] text-white border-4 border-white text-xl font-semibold">
+                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-[#F64B4B] text-white border-4 border-white text-xl font-semibold">
                     <svg width="24px" fill="white" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <g data-name="Layer 2">
                             <g data-name="menu-arrow">
@@ -39,7 +39,7 @@ function FAQ() {
             </div>
             <div class="flex items-start mb-8">
                 <div
-                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-[#f87829] text-white border-4 border-white text-xl font-semibold">
+                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-[#F64B4B] text-white border-4 border-white text-xl font-semibold">
                     <svg width="24px" fill="white" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <g data-name="Layer 2">
                             <g data-name="menu-arrow">
@@ -59,7 +59,7 @@ function FAQ() {
             </div>
             <div class="flex items-start mb-8">
                 <div
-                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-[#f87829] text-white border-4 border-white text-xl font-semibold">
+                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-[#F64B4B] text-white border-4 border-white text-xl font-semibold">
                     <svg width="24px" fill="white" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <g data-name="Layer 2">
                             <g data-name="menu-arrow">
@@ -79,7 +79,7 @@ function FAQ() {
             </div>
             <div class="flex items-start mb-8">
                 <div
-                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-[#f87829] text-white border-4 border-white text-xl font-semibold">
+                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-[#F64B4B] text-white border-4 border-white text-xl font-semibold">
                     <svg width="24px" fill="white" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <g data-name="Layer 2">
                             <g data-name="menu-arrow">
@@ -102,7 +102,7 @@ function FAQ() {
        
             <div class="flex items-start mb-8">
                 <div
-                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-[#f87829] text-white border-4 border-white text-xl font-semibold">
+                    class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-[#F64B4B] text-white border-4 border-white text-xl font-semibold">
                     <svg width="24px" fill="white" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <g data-name="Layer 2">
                             <g data-name="menu-arrow">
