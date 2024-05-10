@@ -5,7 +5,7 @@ import GlobalApi from '../_utils/GlobalApi'
 import Pagination from './Pagination';
 
 
-function ProductSection() {
+function ProductFilter() {
 
 const[productList,setProductList]=useState([]);    
  useEffect(()=>{
@@ -27,9 +27,9 @@ const[productList,setProductList]=useState([]);
     
     <div>
   
-  <div class="   p-10">
-    <h1 class="font-bold text-4xl mb-4 mt-9">Productos nuevos</h1>
-    <h1 class="text-3xl">Descubre los productos más nuevos</h1>
+  <div class=" mt-15  p-10">
+  
+    <h1 class="text-3xl">Productos similares</h1>
 </div>
 
         <ProductList productList={filterProductList('Ropa')}/>
@@ -37,13 +37,7 @@ const[productList,setProductList]=useState([]);
        
 
 
-        <div class=" mt-15  p-10">
-    <h1 class="font-bold text-4xl mb-4 mt-9">zapatos</h1>
-</div>
-
-        <ProductList productList={filterProductList('Zapatos')}/>
-        <div></div>
-        <Pagination/>
+       
 
         
     </div>

@@ -11,14 +11,25 @@ const axiosClient =axios.create({
     }
 })
 
+const getCategory=()=> axiosClient.get('/categories?populate=*')
+
 const getProducts=()=> axiosClient.get('/products?populate=*');
 
 const getProductById=(id)=> axiosClient.get('/products/'+id+'?populate=*');
 
 
+const getCategoryList=()=> axiosClient.get('/categories?populate=*')
+
+//Get  Product List By Category
+
+const getProductListByCategory=(category)=>axiosClient.get('/products?filters\[category\][CategoryName][$contains]='+category+"&populate=*");
+
 export default {
     getProducts,
-    getProductById
+    getProductById,
+    getProductListByCategory,
+    getCategory,
+    getCategoryList
 
 
 }

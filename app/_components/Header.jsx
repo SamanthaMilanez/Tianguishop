@@ -1,14 +1,34 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import Link from "next/link";
+import GlobalApi from '../_utils/GlobalApi';
+
 
 
 
 function Header() {
+  
+  const [categoryList, setCategoryList]=useState([]);
+  useEffect (()=>{
+    getCategoryList();
+  },[])
+
+  const getCategoryList=()=>{
+    GlobalApi.getCategory().then(resp=>{
+      
+      setCategoryList(resp.data.data);
+    })
+  }
+  
+  
+  
   return (
+
+
     <header className="bg-white">
     <div className="mx-auto flex h-16 shadow-sm w-full items-center gap-8 px-4 sm:px-6 lg:px-8">
-    <img id="logo" src="tianguinew2.png" width="300px" height="60px"/>
+    <img id="logo" src="/tianguinew2.png" width="300px" height="60px"/>
   
       <div className="flex flex-1 items-center justify-end md:justify-between">
         <nav aria-label="Global" className="hidden md:block">
@@ -62,7 +82,7 @@ function Header() {
             <span className="sr-only">Toggle menu</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h- 5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

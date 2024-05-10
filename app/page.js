@@ -4,15 +4,25 @@ import About from "./_components/About";
 import Whyus from "./_components/Whyus";
 import Collection from "./_components/Collection";
 import ProductSection from "./_components/ProductSection";
-export default function Home() {
+import CategoryList from "./_components/CategoryList";
+import GlobalApi from "./_utils/GlobalApi";
+
+export default async function Home() {
+
+  
+  const categoryList= await GlobalApi.getCategoryList();
+
   return (
-    <div>
-      <Hero/>
-   
-      <ProductSection/>
-    </div>
-    
+    <>
+      <div>
+        <Hero/>
+       <div>
+        <CategoryList categoryList ={categoryList}/>
+       </div>
+      </div>
+      <div className="p-5 py-5 px-8 md:px-28">
+        <ProductSection/>
+      </div>
+    </>
   );
-
-
 }

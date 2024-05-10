@@ -1,32 +1,33 @@
 import React from 'react';
 import Image from 'next/image';
+import { ChevronRightSquare, LayoutGrid } from 'lucide-react';
+import Link from 'next/link';
 
 function ProductItem({ product }) {
   return (
-    <div className="h-[500px] w-[50] shadow-md hover:shadow-lg flex flex-col">
-      <div className="flex-grow relative">
+    <Link href={'/product-detail/'+product.id}>
+      <div className='hover:border p-1 rounded-lg border-[#FF5757]'>  
         <Image
           src={product?.attributes?.image?.data.attributes?.url}
           alt="img"
-          layout="fill" 
-          objectFit="cover" 
-          className="rounded-t-lg" 
+          width={500}
+          height={450}  
+          className="rounded-t-lg h-[190px] object-cover" 
         />
-         <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">NUEVO
+        <div className='flex justify-between 
+        items-center bg-gray-50 p-3 rounded-b-lg'>
+         <div className=''>
+          <h2 className='text-[16px] font-bold'>{product.attributes.name} </h2>
+          <h2 className='text-[14px] text-gray-400 flex gap-2'>
+            <ChevronRightSquare className='h-4 w-4'/>{product?.attributes?.category?.data.attributes?.CategoryName}</h2>
+            
         </div>
-      </div>
-
-      <div class="p-4">
-        <h3 class="text-lg font-medium mb-2">{product?.attributes?.name}</h3>
-        <p class="text-gray-600 text-sm mb-4">{product?.attributes?.description}</p>
-        <div class="flex items-center justify-between">
-            <span class="font-bold text-lg">MX$ {product?.attributes?.price}</span>
-            <button class="bg-[#FF5757] hover:bg-[#F64B4B] text-white font-bold py-2 px-4 rounded">
-        Comprar
-      </button>
+        <h2 className='font-bold text-[#FF5757] '>MX${product.attributes.price}</h2>
         </div>
-        </div>
-        </div>
+       
+</div>
+</Link>
+     
   );
 }
 
