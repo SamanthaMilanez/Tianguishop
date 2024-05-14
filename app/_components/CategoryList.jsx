@@ -1,18 +1,19 @@
 import React from 'react'
+import Image from 'next/image'
+import CategoryItem from './CategoryItem'
 
-function CategoryList({CategoryList}) {
-  return (
-    <div className='p-10'>
+function CategoryList({categoryList}) {
+
+
   
-  <div class="p-10 text-center">
-    <h1 class="font-bold text-4xl mb-4 mt-2">Categorias</h1>
-    <h1 class="text-3xl">Encuentra lo que buscas</h1>
-</div>
-
-
-      
-        
-    </div>
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3" style={{ marginLeft: '10px' }}>
+    {categoryList && categoryList.map((item, index) => (
+           <div key={index}>
+             <CategoryItem category={item}/>            
+           </div>
+         ))}
+       </div>
 
   )
 }

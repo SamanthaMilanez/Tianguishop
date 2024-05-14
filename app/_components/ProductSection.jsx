@@ -28,14 +28,14 @@ const[productList,setProductList]=useState([]);
     <div>
   
   <div class="   p-10">
-    <h1 class="font-bold text-4xl mb-4 mt-9">Productos nuevos</h1>
-    <h1 class="text-3xl">Descubre los productos más nuevos</h1>
+    <h1 class="font-bold text-4xl mb-4 mt-9 text-center text-[#FF5757]">La mejor manera de apoyar a tu comunidad</h1>
+    <h1 class="text-3xl text-center">Encuentra lo que estas buscando</h1>
 </div>
 
-        <ProductList productList={filterProductList('Ropa')}/>
-        <div></div>
+     
        
-
+        <ProductList productList={productList}/>
+        <div></div>
 
         <div class=" mt-15  p-10">
     <h1 class="font-bold text-4xl mb-4 mt-9">zapatos</h1>

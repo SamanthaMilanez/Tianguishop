@@ -44,7 +44,11 @@ function Header() {
             </li>
            
             <li>
-              <a className="text-gray-500 transition hover:text-[#FF5757]" href="/collection"> Categorias</a>
+              <a className="text-gray-500 transition hover:text-[#FF5757]" href="/collection"> {categoryList.map((category,index)=>(
+                <h2 key={index}>
+                  {category.name}
+                </h2>
+              ))}</a>
             </li>
   
             <li>
