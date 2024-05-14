@@ -4,12 +4,12 @@ import React from 'react'
 function ProductInfo({product}) {
   return (
 
-    <div class="bg-gray-100 dark:bg-gray-800 py-8">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class=" dark:bg-gray-800 py-20 content-center">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 justify-center">
         <div class="flex flex-col md:flex-row -mx-4">
             <div class="md:flex-1 px-4">
                 <div class="h-[460px] rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
-                    <img class="w-full h-full object-cover" src={product?.attributes?.image?.data.attributes?.url} alt="Product Image"/>
+                    <img class="w-full h-full object-cover" src={product?.attributes?.image?.data.attributes?.url} alt="Product Image "/>
                 </div>
                
             </div>

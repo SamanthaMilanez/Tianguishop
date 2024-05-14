@@ -46,21 +46,23 @@ function ProductDetail({params}) {
   }
 
   return (
-    <div className='p-5 py-10 px-10 md:px-28'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 mt-10 gap-5 sm:gap-5 justify-evenly'>
-      
-        <ProductInfo product={productDetail}/>
-      </div>
-      <div >
-      <h2 className='mt-10 text-[20px] font-bold'>Productos similares</h2>
+
+
+    
+
+    <div className=' container mx-auto p-5'>
+    <ProductInfo product={productDetail}/>
+    <hr className="my-6 border-t-2 border-gray-300" /> {/* Línea divisoria */}
+    <h2 className='p-5 mt-10 mb-5 text-3xl text-[#FF5757] font-semibold'>Productos similares</h2>
+    <div>
       {productList.length > 0 ? (
         <ProductList productList={productList}/>
       ) : (
-        <p>No similar products found.</p>
+        <p>No se encontraron productos similares.</p>
       )}
-      </div>
     </div>
-  )
+  </div>
+)
 }
 
 export default ProductDetail;

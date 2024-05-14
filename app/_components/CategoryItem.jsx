@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function CategoryItem({ category }) {
   return (
-    <div className='mt-5 hover:border p-1 rounded-lg border-[#FF5757] flex flex-col items-center'>  
+    <div className='mt-10  p-1 rounded-lg hover:scale-125 flex flex-col items-center cursor-pointer'>  
       <Image
         src={category?.attributes?.Icon?.data[0]?.attributes?.url}
         alt="img"

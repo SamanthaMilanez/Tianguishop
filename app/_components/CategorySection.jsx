@@ -23,7 +23,7 @@ function CategorySection() {
 
     <div class="   p-10">
     <h1 class="font-bold text-4xl mb-4 mt-9 text-center text-[#FF5757]">Categorías</h1>
-    <div> <CategoryList categoryList={categoryList}/></div>
+    <div className='container mx-auto p-5'> <CategoryList categoryList={categoryList}/></div>
 </div>
 </div>
   )
