@@ -2,6 +2,7 @@ import React from 'react';
 
 function About() {
   return (
+    //mensaje de prueba
     <div className="max-w-7xl mx-auto">
     <div className="sm:flex items-center">
       <div className="sm:w-1/2 p-10 my-8 sm:order-last">
