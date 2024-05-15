@@ -22,7 +22,7 @@ export default async function Home() {
         <CategorySection/>
        </div>
       </div>
-      <div className="p-5 py-5 px-8 md:px-28">
+      <div className='container mx-auto p-5'>
         <ProductSection/>
       </div>
     </>

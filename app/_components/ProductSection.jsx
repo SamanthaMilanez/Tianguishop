@@ -38,10 +38,10 @@ const[productList,setProductList]=useState([]);
         <div></div>
 
         <div class=" mt-15  p-10">
-    <h1 class="font-bold text-4xl mb-4 mt-9">zapatos</h1>
+   
 </div>
 
-        <ProductList productList={filterProductList('Zapatos')}/>
+      
         <div></div>
         <Pagination/>
 
