@@ -20,7 +20,7 @@ const[productList,setProductList]=useState([]);
 
     const filterProductList=(category)=>{
       const result = productList.filter(product=>
-        product?.attributes?.category?.data.attributes?.CategoryName==category);
+        product?.attributes?.category?.data?.attributes?.CategoryName==category);
       return result;
     }
   return productList&& (
