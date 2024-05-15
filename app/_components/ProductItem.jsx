@@ -19,7 +19,7 @@ function ProductItem({ product }) {
          <div className=''>
           <h2 className='text-[16px] font-bold'>{product.attributes.name} </h2>
           <h2 className='text-[14px] text-gray-400 flex gap-2'>
-            <ChevronRightSquare className='h-4 w-4'/>{product?.attributes?.category?.data.attributes?.CategoryName}</h2>
+            <ChevronRightSquare className='h-4 w-4'/>{product?.attributes?.category?.data?.attributes?.CategoryName}</h2>
             <h2 className='font-bold text-[#FF5757] '>MX${product.attributes.price}</h2>
             
         </div>

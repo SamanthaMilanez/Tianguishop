@@ -38,7 +38,7 @@ function ProductDetail({params}) {
 
   const getProductListByCategory = () => {
     if (!productDetail) return; // Esperar a que se cargue productDetail
-    GlobalApi.getProductListByCategory(productDetail.attributes.category.data.attributes.CategoryName)
+    GlobalApi.getProductListByCategory(productDetail.attributes?.category?.data?.attributes?.CategoryName)
       .then(resp => {
         console.log(resp);
         setProductList(resp.data.data);
