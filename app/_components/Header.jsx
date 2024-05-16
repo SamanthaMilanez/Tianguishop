@@ -106,31 +106,7 @@ function Header() {
             className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
           >
           
-              <DropdownMenu>
-  <DropdownMenuTrigger><MenuIcon/></DropdownMenuTrigger>
-  <DropdownMenuContent>
-    <DropdownMenuSeparator />
-    <DropdownMenuItem><Link href={'/'}>Inicio</Link></DropdownMenuItem>
-    <DropdownMenuItem><Link href={'/about'}>Sobre nosotros</Link></DropdownMenuItem>
-    <DropdownMenuItem> <DropdownMenu>
-  <DropdownMenuTrigger className='outline-none'> <a href="/collection">Categorias
-              </a></DropdownMenuTrigger>
-  <DropdownMenuContent>
-   
-    <DropdownMenuSeparator />
-    {categoryList.map((category,index)=>(
-        <Link href={'/products-category/'+category.attributes.CategoryName}>
-         <DropdownMenuItem>
-            <h2>{category.attributes?.CategoryName}</h2>
-         </DropdownMenuItem>
-         </Link>
-    ))}
-  </DropdownMenuContent>
-</DropdownMenu></DropdownMenuItem>
-    <DropdownMenuItem><Link href={'/FAQ'}>FAQ </Link></DropdownMenuItem>
-  </DropdownMenuContent>
-</DropdownMenu>
-            
+           
           </button>
         </div>
       </div>
