@@ -9,7 +9,7 @@ function Hero() {
             <p class="text-4xl font-bold md:text-5xl text-[#FF5757]">HASTA 50%</p>
             <p class="text-4xl font-bold md:text-5xl">REBAJAS DE VERANO</p>
             <p class="mt-2 text-sm md:text-lg">Aprovecha la temporada</p>
-            <button class="text-lg md:text-2xl bg-[#FF5757] text-white py-2 px-5 mt-5 hover:bg-[#F64B4B]">Explorar todo</button>
+            
         </div>
         <div class="order-1 lg:order-2">
             <img class="h-80 w-80 object-cover lg:w-[500px] lg:h-[500px]" src="/summer.PNG" alt=""/>
