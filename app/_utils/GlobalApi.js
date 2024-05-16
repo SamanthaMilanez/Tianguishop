@@ -22,7 +22,10 @@ const getCategoryList=()=> axiosClient.get('/categories?populate=*')
 
 //Get  Product List By Category
 
-const getProductListByCategory=(category)=>axiosClient.get('/products?filters\[category\][CategoryName][$contains]='+category+"&populate=*");
+const getProductListByCategory=(category)=>axiosClient.get('/products?filters\[category\][CategoryName][$contains]='+category+"&populate=*")
+.then(resp=>{
+    return resp.data.data
+})
 
 export default {
     getProducts,

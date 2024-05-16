@@ -1,25 +1,34 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
-import Link from "next/link";
 import GlobalApi from '../_utils/GlobalApi';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import Link from 'next/link';
+import { MenuIcon } from 'lucide-react';
 
 
 
 
 function Header() {
   
-  const [categoryList, setCategoryList]=useState([]);
-  useEffect (()=>{
-    getCategoryList();
-  },[])
+  const[categoryList,setCategoryList]=useState([]);    
+  useEffect(()=>{
+     getCategory_();
+ },[])   
+    const getCategory_ =()=>{
+         GlobalApi.getCategory().then(resp=>{
+             console.log(resp.data.data);
+             setCategoryList(resp.data.data);
+         })
+     }
 
-  const getCategoryList=()=>{
-    GlobalApi.getCategory().then(resp=>{
-      
-      setCategoryList(resp.data.data);
-    })
-  }
   
   
   
@@ -28,7 +37,7 @@ function Header() {
 
     <header className="bg-white">
     <div className="mx-auto flex h-16 shadow-sm w-full items-center gap-8 px-4 sm:px-6 lg:px-8">
-    <img id="logo" src="/tianguinew2.png" width="300px" height="60px"/>
+    <Link href={'/'}> <img id="logo" src="/tianguinew2.png" width="300px" height="60px"/></Link>
   
       <div className="flex flex-1 items-center justify-end md:justify-between">
         <nav aria-label="Global" className="hidden md:block">
@@ -43,9 +52,27 @@ function Header() {
               <a className="text-gray-500 transition hover:text-[#FF5757]" href="/about"> Sobre Nosotros </a>
             </li>
            
+
+
             <li>
-              <a className="text-gray-500 transition hover:text-[#FF5757]" href="/collection">Categorias
-              </a>
+
+            <DropdownMenu>
+  <DropdownMenuTrigger className='outline-none'> <a className="text-gray-500 transition hover:text-[#FF5757]" href="/collection">Categorias
+              </a></DropdownMenuTrigger>
+  <DropdownMenuContent>
+   
+    <DropdownMenuSeparator />
+    {categoryList.map((category,index)=>(
+        <Link href={'/products-category/'+category.attributes.CategoryName}>
+         <DropdownMenuItem>
+            <h2>{category.attributes?.CategoryName}</h2>
+         </DropdownMenuItem>
+         </Link>
+    ))}
+  </DropdownMenuContent>
+</DropdownMenu>
+
+             
             </li>
   
             <li>
@@ -78,17 +105,32 @@ function Header() {
           <button
             className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
           >
-            <span className="sr-only">Toggle menu</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h- 5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          
+              <DropdownMenu>
+  <DropdownMenuTrigger><MenuIcon/></DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem><Link href={'/'}>Inicio</Link></DropdownMenuItem>
+    <DropdownMenuItem><Link href={'/about'}>Sobre nosotros</Link></DropdownMenuItem>
+    <DropdownMenuItem> <DropdownMenu>
+  <DropdownMenuTrigger className='outline-none'> <a href="/collection">Categorias
+              </a></DropdownMenuTrigger>
+  <DropdownMenuContent>
+   
+    <DropdownMenuSeparator />
+    {categoryList.map((category,index)=>(
+        <Link href={'/products-category/'+category.attributes.CategoryName}>
+         <DropdownMenuItem>
+            <h2>{category.attributes?.CategoryName}</h2>
+         </DropdownMenuItem>
+         </Link>
+    ))}
+  </DropdownMenuContent>
+</DropdownMenu></DropdownMenuItem>
+    <DropdownMenuItem><Link href={'/FAQ'}>FAQ </Link></DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+            
           </button>
         </div>
       </div>

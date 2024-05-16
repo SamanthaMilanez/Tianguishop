@@ -22,7 +22,7 @@ export default async function Home() {
         <CategorySection/>
        </div>
       </div>
-      <div className='container mx-auto p-5'>
+      <div className=' mx-4 sm:mx-8 md:mx-12 lg:mx-16 xl:mx-20'>
         <ProductSection/>
       </div>
     </>

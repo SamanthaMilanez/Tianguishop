@@ -7,9 +7,6 @@ import ProductList from '@/app/_components/ProductList';
 import { usePathname } from 'next/navigation';
 
 
-
-
-
 function ProductDetail({params}) {
 
   const path =usePathname();
@@ -18,30 +15,27 @@ function ProductDetail({params}) {
 
   useEffect(() => {
     console.log("Product Path", path);
-    if (params?.productId) {
+   
       getProductById_();
-    }
-  }, [params?.productId]);
+    
+  }, []);
 
-  useEffect(() => {
-    if (productDetail) {
-      getProductListByCategory();
-    }
-  }, [productDetail]);
-
+ 
   const getProductById_ = () => {
     GlobalApi.getProductById(params?.productId)
       .then(resp => {
         setProductDetail(resp.data.data);
+        getProductListByCategory(resp.data.data);
       });
   }
 
-  const getProductListByCategory = () => {
-    if (!productDetail) return; // Esperar a que se cargue productDetail
-    GlobalApi.getProductListByCategory(productDetail.attributes?.category?.data?.attributes?.CategoryName)
+  const getProductListByCategory = (product) => {
+    
+    GlobalApi.getProductListByCategory(product?.attributes?.category?.data?.attributes?.CategoryName)
       .then(resp => {
         console.log(resp);
-        setProductList(resp.data.data);
+        setProductList(resp)
+       
       });
   }
 
@@ -50,17 +44,14 @@ function ProductDetail({params}) {
 
     
 
-    <div className=' container mx-auto p-5'>
+    <div className='mx-4 sm:mx-8 md:mx-12 lg:mx-16 xl:mx-20'>
     <ProductInfo product={productDetail}/>
     <hr className="my-6 border-t-2 border-gray-300" /> {/* Línea divisoria */}
     <h2 className='p-5 mt-10 mb-5 text-3xl text-[#FF5757] font-semibold'>Productos similares</h2>
-    <div>
-      {productList.length > 0 ? (
+    {productList&& <div>
         <ProductList productList={productList}/>
-      ) : (
-        <p>No se encontraron productos similares.</p>
-      )}
-    </div>
+    
+    </div>}
   </div>
 )
 }
