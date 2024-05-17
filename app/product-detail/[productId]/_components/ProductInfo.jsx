@@ -38,7 +38,9 @@ function ProductInfo({product}) {
                         ut erat vitae nisi ultrices placerat non eget velit. Integer ornare mi sed ipsum lacinia, non
                         sagittis mauris blandit. Morbi fermentum libero vel nisl suscipit, nec tincidunt mi consectetur.
                     </p>
-                    <button className='flex gap-2 p-4 px-10 mt-5 bg-[#FF5757] hover:bg-[#F64B4B] text-white rounded-lg'><ShoppingBag/> Comprar</button>
+                    <a href="/checkout" style={{ width: '150px' }} className='flex gap-2 p-4 px-5 mt-5 bg-[#FF5757] hover:bg-[#F64B4B] text-white rounded-lg'>
+  <ShoppingBag/> Comprar
+</a>
                 </div>
             </div>
         </div>
