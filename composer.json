@@ -1,0 +1,8 @@
+{
+    "name": "samanthamilanez/tianguishop",
+    "description": "Descripción de tu proyecto",
+    "type": "project",
+    "require": {
+        "php": "^7.4"
+    }
+}
