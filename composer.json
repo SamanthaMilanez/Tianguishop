@@ -1,5 +1,5 @@
 {
-    "name": "Tianguishop",
+    "name": "SamanthaMilanez/Tianguishop",
     "description": "Descripción de tu proyecto",
     "type": "project",
     "require": {
@@ -7,9 +7,7 @@
         "ext-mysqli": "*",
         "vlucas/phpdotenv": "^6.2"
     },
-
     "require-dev": {
         "phpunit/phpunit": "^9.0"
     }
-        
 }
