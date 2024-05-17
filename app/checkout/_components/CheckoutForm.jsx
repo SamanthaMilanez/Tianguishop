@@ -35,10 +35,13 @@ function CheckoutForm() {
   };
 
   return (
+    <div className=' mt-10 container '>
     <form onSubmit={handleSubmit}>
       <PaymentElement />
-      <button disabled={!stripe}>Submit</button>
+      <button className="relative inline-flex items-center justify-center px-5 py-2 text-base font-bold text-white transition-all duration-200 bg-gray-900 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-600 rounded"
+ disabled={!stripe}>Submit</button>
     </form>
+    </div>
   );
 }
 
