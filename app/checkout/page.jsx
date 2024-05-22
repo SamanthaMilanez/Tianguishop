@@ -32,7 +32,7 @@ function Checkout() {
     <div>
       {clientSecret && (
         <Elements stripe={stripePromise} options={options}>
-          <CheckoutForm />
+       <CheckoutForm />
         </Elements>
       )}
     </div>
