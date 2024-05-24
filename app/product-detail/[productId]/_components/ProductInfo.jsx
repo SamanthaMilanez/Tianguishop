@@ -16,10 +16,7 @@ function ProductInfo({product}) {
             </div>
             <div class="md:flex-1 px-4">
                 <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">{product?.attributes?.name}</h2>
-                <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
-                    ante justo. Integer euismod libero id mauris malesuada tincidunt.
-                </p>
+                
                 <div class="flex mb-4">
                     <div class="mr-4">
                         <span class="font-bold text-gray-700 dark:text-gray-300">Precio:</span>
@@ -31,13 +28,7 @@ function ProductInfo({product}) {
                 
                 <div>
                     <span class="font-bold text-gray-700 dark:text-gray-300">Detalles del producto:</span>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                        sed ante justo. Integer euismod libero id mauris malesuada tincidunt. Vivamus commodo nulla ut
-                        lorem rhoncus aliquet. Duis dapibus augue vel ipsum pretium, et venenatis sem blandit. Quisque
-                        ut erat vitae nisi ultrices placerat non eget velit. Integer ornare mi sed ipsum lacinia, non
-                        sagittis mauris blandit. Morbi fermentum libero vel nisl suscipit, nec tincidunt mi consectetur.
-                    </p>
+                    <span class="text-gray-600 dark:text-gray-300 text-sm mb-4">  {product?.attributes?.descripcion}</span>
                     <a href="/checkout" style={{ width: '150px' }} className='flex gap-2 p-4 px-5 mt-5 bg-[#FF5757] hover:bg-[#F64B4B] text-white rounded-lg'>
   <ShoppingBag/> Comprar
 </a>
