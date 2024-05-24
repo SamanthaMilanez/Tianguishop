@@ -24,6 +24,8 @@ export default async function Home() {
       </div>
       <div className=' mx-4 sm:mx-8 md:mx-12 lg:mx-16 xl:mx-20'>
         <ProductSection/>
+
+
       </div>
     </>
   );

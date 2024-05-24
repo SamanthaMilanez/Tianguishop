@@ -35,16 +35,16 @@ function CheckoutForm() {
   };
 
   return (
-    <div className='container bg-slate-100 mt-20'>
+    <div className='container'>
     <div className="flex flex-col md:flex-row items-center ">
       <div className="md:w-1/2">
-        <img src="\logo fam.PNG" alt="Imagen" />
+        <img src="/giphy (1).gif" alt="Imagen" />
       </div>
       <div className="md:w-1/2 md:px-8">
         <form onSubmit={handleSubmit}>
           <PaymentElement />
           <button className="mt-4 md:mt-0 relative inline-flex items-center justify-center px-5 py-2 text-base font-bold text-white transition-all duration-200 bg-gray-900 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-600 rounded" disabled={!stripe}>
-            Submit
+            Pagar
           </button>
         </form>
       </div>

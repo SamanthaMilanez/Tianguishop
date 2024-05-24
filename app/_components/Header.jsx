@@ -94,20 +94,10 @@ function Header() {
               Login
             </a>
   
-            <a
-              className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#FF5757] transition hover:text-[#F64B4B] sm:block"
-              href="create-account"
-            >
-              Registro
-            </a>
+         
           </div>
   
-          <button
-            className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
-          >
-          
-           
-          </button>
+    
         </div>
       </div>
     </div>

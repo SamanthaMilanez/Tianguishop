@@ -15,7 +15,13 @@ const getCategory=()=> axiosClient.get('/categories?populate=*')
 
 const getProducts=()=> axiosClient.get('/products?populate=*');
 
+const getPuestos=()=> axiosClient.get('/puestos?populate=*');
+
+
 const getProductById=(id)=> axiosClient.get('/products/'+id+'?populate=*');
+
+const getPuestoById=(id)=> axiosClient.get('/puestos/'+id+'?populate=*');
+
 
 
 const getCategoryList=()=> axiosClient.get('/categories?populate=*')
@@ -27,12 +33,21 @@ const getProductListByCategory=(category)=>axiosClient.get('/products?filters\[c
     return resp.data.data
 })
 
+
+const getProductListByPuesto=(puesto)=>axiosClient.get('/products?filters\[puesto\][NombrePuesto][$contains]='+puesto+"&populate=*")
+.then(resp=>{
+    return resp.data.data
+})
+
+
 export default {
     getProducts,
     getProductById,
     getProductListByCategory,
     getCategory,
-    getCategoryList
-
+    getCategoryList,
+    getProductListByPuesto,
+    getPuestoById,
+    getPuestos
 
 }

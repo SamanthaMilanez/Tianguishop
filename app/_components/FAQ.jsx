@@ -117,7 +117,7 @@ function FAQ() {
                 </div>
                 <div class="text-md">
                     <h1 class="text-gray-900 font-semibold mb-2">¿Hay algún costo adicional por utilizar Tianguishop como vendedor?</h1>
-                    <p class="text-gray-500 text-sm">Sí, se cobra una pequeña comisión por cada transacción realizada en la plataforma. Este costo nos ayuda a mantener la página funcionando y ofrecer un mejor servicio a nuestros usuarios..</p>
+                    <p class="text-gray-500 text-sm">Sí, se cobra una pequeña comisión por cada transacción realizada en la plataforma. Este costo nos ayuda a mantener la página funcionando y ofrecer un mejor servicio a nuestros usuarios.</p>
                 </div>
             </div>
         </div>

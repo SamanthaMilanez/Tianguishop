@@ -29,7 +29,7 @@ function Page() {
         </div>
         <button type="submit" class="w-full text-white bg-[#FF5757] hover:bg-[#F64B4B] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#FF5757] dark:hover:bg-[#FF5757] dark:focus:ring-blue-800">Crear mi cuenta</button>
         <p class="text-sm font-light text-gray-500 dark:text-gray-400">¿Ya tienes cuenta? <a
-            class="font-medium text-blue-600 hover:underline dark:text-blue-500" href="/signin">Inicia sesión aquí</a>
+            class="font-medium text-blue-600 hover:underline dark:text-blue-500" href="/sign-in">Inicia sesión aquí</a>
         </p>
             </form>
           </div>

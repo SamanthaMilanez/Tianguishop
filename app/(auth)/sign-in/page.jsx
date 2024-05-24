@@ -24,9 +24,9 @@ function Page() {
               placeholder="Contraseña"
             />
             <div className="flex justify-end mt-3 mb-4">
-              <a href="#" className="text-blue-700">¿No tienes cuenta? Regístrate</a>
+              <a href="/create-account" className="text-blue-700">¿No tienes cuenta? Regístrate</a>
             </div>
-            <button type="submit" className="py-3 bg-[#FF5757] text-white w-full rounded-md font-bold">Submit</button>
+            <button type="submit" className="py-3 bg-[#FF5757] text-white w-full rounded-md font-bold">Entrar</button>
           </form>
         </div>
       </div>

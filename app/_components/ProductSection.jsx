@@ -28,8 +28,7 @@ const[productList,setProductList]=useState([]);
     <div>
   
   <div class="   p-10">
-    <h1 class="font-bold text-4xl mb-4 mt-9 text-center text-[#FF5757]">La mejor manera de apoyar a tu comunidad</h1>
-    <h1 class="text-3xl text-center">Encuentra lo que estas buscando</h1>
+    <h1 class="font-bold text-3xl mb-4 mt-9  text-[#FF5757]"> ¡Dales otra oportunidad!</h1>
 </div>
 
      
