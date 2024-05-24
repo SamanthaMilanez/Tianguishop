@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/page": [
+    "/puesto-detail/[puestoId]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/puesto-detail/[puestoId]/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -11,10 +11,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/puesto-detail/[puestoId]/page": [
+    "/product-detail/[productId]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/puesto-detail/[puestoId]/page.js"
+      "static/chunks/app/product-detail/[productId]/page.js"
     ]
   }
 }
